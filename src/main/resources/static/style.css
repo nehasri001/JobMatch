@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #202124;
+    min-height: 100vh;
+}
+
+.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: white;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tagline {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.screen {
+    display: none;
+    min-height: calc(100vh - 120px);
+}
+
+.screen.active {
+    display: block;
+}
+
+.hero {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    color: #4f46e5;
+}
+
+.hero p {
+    max-width: 560px;
+    margin: 0 auto 32px;
+    color: #6b7280;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.primary-button {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 24px;
+    background: #4f46e5;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    opacity: 0.9;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.form-container,
+.results-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.form-header,
+.results-header {
+    margin-bottom: 35px;
+}
+
+.step-label {
+    color: #4f46e5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.form-header h2,
+.results-header h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 34px;
+}
+
+.form-header p,
+.results-header p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.helper-text {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d8dbe5;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+}
+
+input:focus {
+    border-color: #4f46e5;
+}
+
+.skill-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.add-button {
+    width: 48px;
+    border: none;
+    border-radius: 9px;
+    background: #202124;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #eef2ff;
+    color: #3730a3;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.skill-remove {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.error-message {
+    display: block;
+    color: #dc2626;
+    margin-top: 7px;
+    font-size: 13px;
+}
+
+.loading-container,
+.message-container {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.loader {
+    width: 42px;
+    height: 42px;
+    border: 4px solid #e5e7eb;
+    border-top-color: #4f46e5;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 25px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-container h2,
+.message-container h2 {
+    margin-bottom: 12px;
+}
+
+.loading-container p,
+.message-container p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.message-icon {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.your-skills {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.your-skills h3 {
+    margin-bottom: 14px;
+}
+
+.results-container h3 {
+    margin-bottom: 15px;
+}
+
+.job-card {
+    background: white;
+    border: 1px solid #e4e5ea;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 15px;
+}
+
+.job-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.job-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.job-company {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.match-badge {
+    min-width: 70px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: #ecfdf5;
+    color: #047857;
+    font-weight: 700;
+}
+
+.job-info {
+    margin-top: 15px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.job-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 15px;
+}
+
+.job-skill {
+    padding: 6px 9px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.results-container .secondary-button {
+    margin-top: 20px;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .tagline {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .form-container,
+    .results-container {
+        padding-top: 40px;
+    }
+
+    .job-top {
+        flex-direction: column;
+    }
+
+    .match-badge {
+        width: 80px;
+    }
+}

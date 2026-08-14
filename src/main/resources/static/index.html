@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JobMatch - Find Your Next Opportunity</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">JobMatch</div>
+    <div class="tagline">Find work that fits your skills</div>
+</header>
+
+<main>
+
+    <!-- Welcome Page -->
+    <section id="welcomeSection" class="screen active">
+
+        <div class="hero">
+
+            <div class="hero-content">
+
+                <span class="badge">
+                    Smart Job Recommendations
+                </span>
+
+                <h1>
+                    Find jobs that match
+                    <span class="highlight">your skills.</span>
+                </h1>
+
+                <p>
+                    Tell us what you know and we'll help you discover
+                    opportunities that fit your skills.
+                </p>
+
+                <button id="getStartedButton" class="primary-button">
+                    Get Started →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- User Details -->
+    <section id="detailsSection" class="screen">
+
+        <div class="form-container">
+
+            <div class="form-header">
+
+                <span class="step-label">STEP 1 OF 2</span>
+
+                <h2>Tell us about yourself</h2>
+
+                <p>
+                    We'll use your skills to find the best job matches.
+                </p>
+
+            </div>
+
+
+            <!-- Name -->
+            <div class="form-group">
+
+                <label for="userName">
+                    Your name
+                </label>
+
+                <input
+                    type="text"
+                    id="userName"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                >
+
+                <small id="nameError" class="error-message"></small>
+
+            </div>
+
+
+            <!-- Skills -->
+            <div class="form-group">
+
+                <label>
+                    Your skills
+                </label>
+
+                <p class="helper-text">
+                    Add the skills you currently have.
+                </p>
+
+                <div id="skillList" class="skill-list"></div>
+
+                <div class="skill-input-container">
+
+                    <input
+                        type="text"
+                        id="skillInput"
+                        placeholder="e.g. Java, SQL, Docker"
+                    >
+
+                    <button
+                        id="addSkillButton"
+                        class="add-button"
+                        type="button"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+                <small id="skillError" class="error-message"></small>
+
+            </div>
+
+
+            <button
+                id="findJobsButton"
+                class="primary-button full-width"
+                type="button"
+            >
+                Find My Jobs →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Loading -->
+    <section id="loadingSection" class="screen">
+
+        <div class="loading-container">
+
+            <div class="loader"></div>
+
+            <h2>Finding your best matches...</h2>
+
+            <p>
+                We're comparing your skills with available opportunities.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Results -->
+    <section id="resultsSection" class="screen">
+
+        <div class="results-container">
+
+            <div class="results-header">
+
+                <span class="step-label">
+                    YOUR RESULTS
+                </span>
+
+                <h2>
+                    Great to meet you,
+                    <span id="resultUserName"></span>!
+                </h2>
+
+                <p>
+                    Here are the jobs that best match your skills.
+                </p>
+
+            </div>
+
+
+            <!-- User skills -->
+            <div class="your-skills">
+
+                <h3>Your skills</h3>
+
+                <div id="resultSkills" class="skill-list"></div>
+
+            </div>
+
+
+            <!-- Jobs -->
+            <div>
+
+                <h3>Recommended jobs</h3>
+
+                <div id="recommendationsContainer"></div>
+
+            </div>
+
+
+            <button
+                id="changeSkillsButton"
+                class="secondary-button"
+                type="button"
+            >
+                ← Change My Skills
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Empty State -->
+    <section id="emptySection" class="screen">
+
+        <div class="message-container">
+
+            <div class="message-icon">
+                🔎
+            </div>
+
+            <h2>No matching jobs yet</h2>
+
+            <p>
+                We couldn't find a job that matches your current skills.
+                Try adding a few more skills and search again.
+            </p>
+
+            <button
+                id="tryAgainButton"
+                class="primary-button"
+            >
+                Add More Skills
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Error State -->
+    <section id="errorSection" class="screen">
+
+        <div class="message-container">
+
+            <div class="message-icon">
+                ⚠️
+            </div>
+
+            <h2>Something went wrong</h2>
+
+            <p id="errorText">
+                We couldn't load your recommendations.
+                Please try again.
+            </p>
+
+            <button
+                id="retryButton"
+                class="primary-button"
+            >
+                Try Again
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        JobMatch · Skill-based job recommendations
+    </p>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
