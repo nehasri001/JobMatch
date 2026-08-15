@@ -3,6 +3,9 @@
  1. Overview
 
 Job Graph is a skill-based job recommendation web application powered by **CognoDB**, a graph database compatible with the Neo4j driver.
+## Live Demo
+http://localhost:8080
+
 
 The application allows a candidate to:
 
