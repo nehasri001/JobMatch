@@ -591,7 +591,7 @@ If the recommendation service cannot be reached, the frontend displays an error 
 
 ## 17. Hosted Demo
 
-**Demo URL:** `<ADD_HOSTED_APPLICATION_URL>`
+**Demo URL:** `jobmatch-production-1065.up.railway.app`
 
 The hosted application should remain available after submission so that the reviewers can test the application.
 
