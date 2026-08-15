@@ -619,7 +619,7 @@ Change skills
 No matching jobs / empty state
 ```
 
-**Recording URL:** `<ADD_SCREEN_RECORDING_URL>`
+**Recording URL:** `https://drive.google.com/file/d/1TcoHWqDDKaYY53hYRziW7Pf7U9D-pB1w/view?usp=sharing`
 
 ---
 
